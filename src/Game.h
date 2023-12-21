@@ -1,4 +1,3 @@
-#include <SFML/Graphics.hpp>
 #include <cmath>
 #include "Player.h"
 #include "Bullet.h"
