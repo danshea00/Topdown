@@ -16,8 +16,8 @@ add_subdirectory(lib/bgfx.cmake)
 add_subdirectory(lib/sfml)
 # find_package(glfw3 3.3 REQUIRED)
 
-set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/input.cpp src/Player.cpp)
-set(C_HEADERS src/Bullet.h src/Game.h src/input.h src/Player.h)
+set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/input.cpp src/Player.cpp src/Entity.cpp)
+set(C_HEADERS src/Bullet.h src/Game.h src/input.h src/Player.h src/Entity.h)
 
 add_executable(main ${C_SOURCES} ${C_HEADERS})
 target_link_libraries(main bgfx bx sfml-system sfml-window sfml-graphics)

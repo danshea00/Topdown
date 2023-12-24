@@ -1,4 +1,5 @@
 #include <cmath>
+#include "Entity.h"
 #include "Player.h"
 #include "Bullet.h"
 
@@ -6,6 +7,7 @@ class Game {
 public:
     Game();
     void run();
+    void spawn(Entity* entity);
 private:
     void handleEvents();
     void update(sf::Time deltaTime);
@@ -17,4 +19,7 @@ private:
     float m_theta;
     bool m_isButtonHeld;
     std::vector<Bullet> m_bullets;
+    // entities
+    std::vector<Entity*> m_entities;
+
 };

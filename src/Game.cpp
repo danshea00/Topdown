@@ -8,7 +8,9 @@ Game::Game() :
     m_player(sf::Vector2f(200.0f, 300.0f), 15),
     m_theta(1.0f),
     m_isButtonHeld(false)
-{}
+{
+    spawn(&m_player);
+}
 
 void Game::run() {
     while (m_window.isOpen()) {
@@ -27,8 +29,7 @@ void Game::handleEvents() {
             break;
         case sf::Event::MouseButtonPressed:
             if (event.mouseButton.button == sf::Mouse::Left) {
-                m_bullets.push_back(
-                    Bullet(m_player.getPosition(),
+                spawn(new Bullet(m_player.getPosition(),
                     static_cast<sf::Vector2f>(sf::Mouse::getPosition(m_window))
                         - m_player.getPosition(),
                     m_theta)
@@ -60,26 +61,8 @@ void Game::update(sf::Time deltaTime) {
             m_theta += 0.005f;
         }
     }
-
-    // Handle player movement
-    sf::Vector2f movement(0.f, 0.f);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        movement.y -= 1.f;
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        movement.x -= 1.f;
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        movement.y += 1.f;
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        movement.x += 1.f;
-    }
-
-    m_player.move(movement * float(deltaTime.asMilliseconds()));
-   
-    for (auto& bullet : m_bullets) {
-        bullet.update(deltaTime);
+    for (auto& entity : m_entities) {
+        entity->update(deltaTime);
     }
 }
 
@@ -96,9 +79,8 @@ void Game::render() {
     // Draw the lines vector
     m_window.draw(&lines[0], lines.size(), sf::Lines);
 
-    for (auto& bullet : m_bullets) {
-        bullet.draw(m_window);
-
+    for (auto& entity : m_entities) {
+        entity->draw(m_window);
     }
     m_player.draw(m_window);
 
@@ -124,4 +106,8 @@ std::vector<sf::Vertex> Game::createLines(sf::Vector2f playerPos, sf::Vector2i m
     };
 
     return lines;
+}
+
+void Game::spawn(Entity* entity) {
+    m_entities.push_back(entity);
 }

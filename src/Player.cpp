@@ -6,8 +6,27 @@ Player::Player(sf::Vector2f position, float speed) :
     m_position(position), m_speed(speed)
 {
     m_circle.setRadius(15);
-    m_circle.setFillColor(sf::Color::Red);
+    m_circle.setFillColor(sf::Color::Blue);
     m_circle.setPosition(m_position);
+}
+
+void Player::update(sf::Time deltaTime)
+{
+    sf::Vector2f movement(0.f, 0.f);
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+        movement.y -= 1.f;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+        movement.x -= 1.f;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+        movement.y += 1.f;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        movement.x += 1.f;
+    }
+
+    move(movement * float(deltaTime.asMilliseconds()));
 }
 
 void Player::move(sf::Vector2f movement)

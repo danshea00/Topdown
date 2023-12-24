@@ -1,11 +1,12 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "Entity.h"
 
 #define BULLET_SPEED 1000.0f
 #define BULLET_RADIUS 3.0f
 
-class Bullet {
+class Bullet : public Entity {
 public:
     Bullet(sf::Vector2f position, sf::Vector2f direction, float theta);
     void update(sf::Time deltaTime);
