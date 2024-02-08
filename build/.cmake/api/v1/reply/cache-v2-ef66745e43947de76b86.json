@@ -279,7 +279,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Choose the type of build (Debug or Release)"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
@@ -1215,7 +1215,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "12"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",

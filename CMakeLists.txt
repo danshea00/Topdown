@@ -12,16 +12,16 @@ project(Topdown
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(lib/bgfx.cmake)
-add_subdirectory(lib/sfml)
-add_subdirectory(lib/stduuid)
+# add_subdirectory(lib/bgfx.cmake)
+# add_subdirectory(lib/sfml)
+# add_subdirectory(lib/stduuid)
 add_subdirectory(src)
 
-include(FetchContent)
-FetchContent_Declare(SFML
-    GIT_REPOSITORY https://github.com/SFML/SFML.git
-    GIT_TAG 2.6.x)
-FetchContent_MakeAvailable(SFML)
+# include(FetchContent)
+# FetchContent_Declare(SFML
+#     GIT_REPOSITORY https://github.com/SFML/SFML.git
+#     GIT_TAG 2.6.x)
+# FetchContent_MakeAvailable(SFML)
 
 
-target_link_libraries(topdown bgfx bx sfml-system sfml-window sfml-graphics stduuid)
+target_link_libraries(topdown)
