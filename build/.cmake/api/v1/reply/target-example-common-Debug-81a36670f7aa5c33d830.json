@@ -1,0 +1,1108 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/bgfx.cmake/libexample-common.a"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_example",
+			"include",
+			"target_link_libraries",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"lib/bgfx.cmake/cmake/examples.cmake",
+			"lib/bgfx.cmake/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 73,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 214,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 135,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 137,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 136,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-ObjC++ -g -std=c++14 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.5"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "ENTRY_CONFIG_IMPLEMENT_MAIN=1"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 7,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bgfx/examples/common"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bgfx/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bx/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bx/3rdparty"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bx/include/compat/osx"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/astc-codec"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/astc-codec/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/iqa/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/nvtt"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bgfx/3rdparty"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					4
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				27,
+				28,
+				29,
+				30,
+				33,
+				35,
+				37,
+				38,
+				39,
+				40,
+				42,
+				43,
+				44,
+				45,
+				47,
+				55,
+				57,
+				59,
+				85,
+				105,
+				107,
+				114,
+				120,
+				122,
+				124,
+				127,
+				129
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "bx::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "astc-codec::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "astc::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "edtaa3::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "etc1::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "etc2::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "iqa::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "squish::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "nvtt::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pvrtc::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "bimg::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "bgfx::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "meshoptimizer::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "dear-imgui::@2b877c6934690224714f"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "bgfx/examples"
+	},
+	"id" : "example-common::@2b877c6934690224714f",
+	"name" : "example-common",
+	"nameOnDisk" : "libexample-common.a",
+	"paths" : 
+	{
+		"build" : "lib/bgfx.cmake",
+		"source" : "lib/bgfx.cmake"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				27,
+				28,
+				29,
+				30,
+				33,
+				35,
+				37,
+				38,
+				39,
+				40,
+				42,
+				43,
+				44,
+				45,
+				47,
+				55,
+				57,
+				59,
+				85,
+				105,
+				107,
+				114,
+				120,
+				122,
+				124,
+				127,
+				129
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				4,
+				6,
+				8,
+				10,
+				13,
+				15,
+				17,
+				19,
+				21,
+				23,
+				25,
+				31,
+				32,
+				34,
+				36,
+				41,
+				46,
+				48,
+				49,
+				51,
+				53,
+				56,
+				58,
+				60,
+				62,
+				64,
+				66,
+				68,
+				69,
+				71,
+				73,
+				75,
+				77,
+				79,
+				81,
+				83,
+				84,
+				86,
+				87,
+				88,
+				90,
+				92,
+				94,
+				96,
+				98,
+				100,
+				102,
+				103,
+				106,
+				108,
+				110,
+				112,
+				115,
+				117,
+				119,
+				121,
+				123,
+				125,
+				126,
+				128,
+				130
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				3,
+				5,
+				7,
+				9,
+				11,
+				12,
+				14,
+				16,
+				18,
+				20,
+				22,
+				24,
+				26,
+				50,
+				52,
+				54,
+				61,
+				63,
+				65,
+				67,
+				70,
+				72,
+				74,
+				76,
+				78,
+				80,
+				82,
+				89,
+				91,
+				93,
+				95,
+				97,
+				99,
+				101,
+				104,
+				109,
+				111,
+				113,
+				116,
+				118
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/debugdraw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/debugdraw.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_fill.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_fill.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_fill_lit.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_fill_lit.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_fill_texture.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_fill_texture.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_lines.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_lines.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_lines_stipple.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/fs_debugdraw_lines_stipple.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/varying.def.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_lit.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_lit.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_lit_mesh.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_lit_mesh.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_mesh.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_mesh.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_texture.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_fill_texture.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_lines.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_lines.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_lines_stipple.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/debugdraw/vs_debugdraw_lines_stipple.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/dialog_darwin.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_ios.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_osx.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/cmd.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/cmd.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/dbg.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/dialog.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/dialog.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_android.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_glfw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_html5.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_noop.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_p.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_sdl.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_windows.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/entry_x11.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/input.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/entry/input.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/font_manager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/font_manager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/fs_font_basic.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/fs_font_basic.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/fs_font_distance_field.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/fs_font_distance_field.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/fs_font_distance_field_subpixel.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/fs_font_distance_field_subpixel.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/text_buffer_manager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/text_buffer_manager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/text_metrics.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/text_metrics.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/utf8.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/utf8.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/varying.def.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/vs_font_basic.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/vs_font_basic.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/vs_font_distance_field.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/vs_font_distance_field.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/vs_font_distance_field_subpixel.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/font/vs_font_distance_field_subpixel.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/droidsans.ttf.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_color.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_color.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_cubemap.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_cubemap.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_image.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_image.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_image_swizz.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_image_swizz.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_latlong.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_latlong.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_texture.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_imgui_texture.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_ocornut_imgui.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/fs_ocornut_imgui.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/icons_font_awesome.ttf.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/icons_kenney.ttf.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/imgui.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/imgui.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/roboto_regular.ttf.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/robotomono_regular.ttf.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/varying.def.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_color.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_color.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_cubemap.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_cubemap.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_image.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_image.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_latlong.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_latlong.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_texture.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_imgui_texture.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_ocornut_imgui.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/imgui/vs_ocornut_imgui.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/fontstash.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/fs_nanovg_fill.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/fs_nanovg_fill.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/nanovg.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/nanovg.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/nanovg_bgfx.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/nanovg_bgfx.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/varying.def.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/vs_nanovg_fill.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/nanovg/vs_nanovg_fill.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/ps/fs_particle.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/ps/fs_particle.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/ps/particle_system.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/ps/particle_system.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/ps/varying.def.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/ps/vs_particle.bin.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/ps/vs_particle.sc",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/aviwriter.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/bgfx_utils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/bgfx_utils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/bounds.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/bounds.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/camera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/camera.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/common.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/cube_atlas.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/cube_atlas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/example-glue.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/common/packrect.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

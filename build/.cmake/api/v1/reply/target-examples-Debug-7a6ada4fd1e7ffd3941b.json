@@ -1,0 +1,664 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"add_dependencies",
+			"add_example"
+		],
+		"files" : 
+		[
+			"lib/bgfx.cmake/cmake/examples.cmake",
+			"lib/bgfx.cmake/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 73,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 209,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 12
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 14
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 16
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 18
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 20
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 22
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 24
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 26
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 28
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 30
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 32
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 34
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 36
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 38
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 40
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 42
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 44
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 46
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 48
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 50
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 52
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 54
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 56
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 58
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 60
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 62
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 64
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 66
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 68
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 70
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 72
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 74
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 76
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 78
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "example-00-helloworld::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "example-01-cubes::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "example-02-metaballs::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "example-03-raymarch::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "example-04-mesh::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "example-05-instancing::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "example-06-bump::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "example-07-callback::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 21,
+			"id" : "example-08-update::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 23,
+			"id" : "example-09-hdr::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 25,
+			"id" : "example-10-font::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 27,
+			"id" : "example-11-fontsdf::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 29,
+			"id" : "example-12-lod::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 31,
+			"id" : "example-13-stencil::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 33,
+			"id" : "example-14-shadowvolumes::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 35,
+			"id" : "example-15-shadowmaps-simple::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 37,
+			"id" : "example-16-shadowmaps::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 39,
+			"id" : "example-17-drawstress::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 41,
+			"id" : "example-18-ibl::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 43,
+			"id" : "example-19-oit::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 45,
+			"id" : "example-20-nanovg::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 47,
+			"id" : "example-22-windows::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 49,
+			"id" : "example-23-vectordisplay::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 51,
+			"id" : "example-24-nbody::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 53,
+			"id" : "example-25-c99::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "example-26-occlusion::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 57,
+			"id" : "example-27-terrain::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 59,
+			"id" : "example-28-wireframe::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 61,
+			"id" : "example-29-debugdraw::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 63,
+			"id" : "example-30-picking::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 65,
+			"id" : "example-31-rsm::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 67,
+			"id" : "example-32-particles::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 69,
+			"id" : "example-33-pom::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 71,
+			"id" : "example-34-mvs::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 73,
+			"id" : "example-35-dynamic::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 75,
+			"id" : "example-36-sky::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 77,
+			"id" : "example-38-bloom::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 79,
+			"id" : "example-39-assao::@2b877c6934690224714f"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "bgfx/examples"
+	},
+	"id" : "examples::@2b877c6934690224714f",
+	"name" : "examples",
+	"paths" : 
+	{
+		"build" : "lib/bgfx.cmake",
+		"source" : "lib/bgfx.cmake"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

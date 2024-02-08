@@ -1,0 +1,758 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/bgfx.cmake/example-16-shadowmaps"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_example",
+			"include",
+			"target_link_libraries",
+			"add_custom_command",
+			"add_bgfx_shader",
+			"target_compile_definitions"
+		],
+		"files" : 
+		[
+			"lib/bgfx.cmake/cmake/examples.cmake",
+			"lib/bgfx.cmake/CMakeLists.txt",
+			"lib/bgfx.cmake/cmake/bgfx.cmake",
+			"lib/bgfx.cmake/cmake/bimg.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 73,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 275,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 153,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 155,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 214,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 137,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 67,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 85,
+				"parent" : 9
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 66,
+				"parent" : 0
+			},
+			{
+				"file" : 3,
+				"parent" : 11
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 41,
+				"parent" : 12
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 176,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 103,
+				"parent" : 14
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-ObjC++ -g -std=c++14 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.5"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 16,
+					"define" : "ENTRY_CONFIG_IMPLEMENT_MAIN=1"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__STDC_CONSTANT_MACROS"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "__STDC_FORMAT_MACROS"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__STDC_LIMIT_MACROS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bgfx/examples/common"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bgfx/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bx/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bx/3rdparty"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bx/include/compat/osx"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/astc-codec"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/astc-codec/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/iqa/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bimg/3rdparty/nvtt"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/albertdemskoy/Desktop/projects/Topdown/lib/bgfx.cmake/bgfx/3rdparty"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					4
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				37
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "bx::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "astc-codec::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "astc::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "edtaa3::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "etc1::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "etc2::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "iqa::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "squish::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "nvtt::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pvrtc::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "bimg::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "bgfx::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "meshoptimizer::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "shaderc::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "dear-imgui::@2b877c6934690224714f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "example-common::@2b877c6934690224714f"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "bgfx/examples"
+	},
+	"id" : "example-16-shadowmaps::@2b877c6934690224714f",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-ObjC++ -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "libexample-common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "libbgfx.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "libbimg.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libastc-codec.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libastc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libedtaa3.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libetc1.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libetc2.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libiqa.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libsquish.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libnvtt.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "libpvrtc.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework Cocoa",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework Metal",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework QuartzCore",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "libdear-imgui.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "libbx.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework Foundation",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "libmeshoptimizer.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "example-16-shadowmaps",
+	"nameOnDisk" : "example-16-shadowmaps",
+	"paths" : 
+	{
+		"build" : "lib/bgfx.cmake",
+		"source" : "lib/bgfx.cmake"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Shader Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				37
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_black.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_esm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_esm_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_esm_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_esm_linear_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_esm_linear_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_esm_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_hard.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_hard_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_hard_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_hard_linear_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_hard_linear_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_hard_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_pcf.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_pcf_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_pcf_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_pcf_linear_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_pcf_linear_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_pcf_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_vsm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_vsm_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_vsm_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_vsm_linear_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_vsm_linear_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_lighting_vsm_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_color_texture.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_hblur.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_hblur_vsm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_packdepth.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_packdepth_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_packdepth_vsm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_packdepth_vsm_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_texture.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_unpackdepth.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_unpackdepth_vsm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_vblur.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/fs_shadowmaps_vblur_vsm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/shadowmaps.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/varying.def.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color_lighting.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color_lighting_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color_lighting_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color_lighting_linear_csm.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color_lighting_linear_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color_lighting_omni.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_color_texture.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_depth.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_hblur.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_packdepth.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_packdepth_linear.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_texture.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_texture_lighting.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_unpackdepth.sc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "lib/bgfx.cmake/bgfx/examples/16-shadowmaps/vs_shadowmaps_vblur.sc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

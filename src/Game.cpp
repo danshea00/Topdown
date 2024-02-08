@@ -2,12 +2,13 @@
 #include "Game.h"
 #include "Player.h"
 #include "Bullet.h"
+#include "EntityManager.h"
 
-Game::Game() : m_window(sf::VideoMode(2000, 1000), "Top-Down Game"),
-               m_player(sf::Vector2f(200.0f, 300.0f), 2),
-               m_isButtonHeld(false)
+Game::Game() : m_window(sf::VideoMode(2000, 1000), "Top-Down Game"), entityManager(EntityManager.getInstance())
+                                                                         m_isButtonHeld(false)
 {
-    spawn(&m_player);
+    m_player = std::make_shared<Player>(sf::Vector2f(200.0f, 300.0f), 1);
+    spawn(m_player);
 }
 
 void Game::run()
@@ -23,6 +24,7 @@ void Game::run()
 void Game::handleEvents()
 {
     sf::Event event;
+    auto mousePos = static_cast<sf::Vector2f>(sf::Mouse::getPosition(m_window));
     while (m_window.pollEvent(event))
     {
         switch (event.type)
@@ -33,23 +35,23 @@ void Game::handleEvents()
         case sf::Event::MouseButtonPressed:
             if (event.mouseButton.button == sf::Mouse::Left)
             {
-                spawn(m_player.shoot(static_cast<sf::Vector2f>(sf::Mouse::getPosition(m_window))));
+                m_player->shoot(mousePos);
             }
             if (event.mouseButton.button == sf::Mouse::Right)
             {
-                m_player.beginAiming();
+                m_player->beginAiming();
             }
             break;
         case sf::Event::KeyPressed:
             if (event.key.code == sf::Keyboard::Space)
             {
-                m_player.beginAiming();
+                m_player->beginAiming();
             }
             break;
         case sf::Event::KeyReleased:
             if (event.key.code == sf::Keyboard::Space)
             {
-                m_player.endAiming();
+                m_player->endAiming();
             }
             break;
         default:
@@ -60,27 +62,19 @@ void Game::handleEvents()
 
 void Game::update(sf::Time deltaTime)
 {
-
-    for (auto &entity : m_entities)
-    {
-        entity->update(deltaTime);
-    }
+    entityManager.updateEntities()
 }
 
 void Game::render()
 {
     m_window.clear();
-
-    for (auto &entity : m_entities)
-    {
-        entity->draw(m_window);
-    }
+    entityManager.drawEntities(m_window);
 
     // Display the window contents
     m_window.display();
 }
 
-void Game::spawn(Entity *entity)
+void Game::spawn(std::shared_ptr<Entity> entity)
 {
-    m_entities.push_back(entity);
+    entityManager.addEntity(entity)
 }

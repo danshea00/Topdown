@@ -1,6 +1,9 @@
-[submodule "lib/bgfx.cmake"]
-	path = lib/bgfx.cmake
-	url = https://github.com/widberg/bgfx.cmake
-[submodule "lib/sfml"]
-	path = lib/sfml
-	url = git@github.com:SFML/cmake-sfml-project.git
+# [submodule "lib/bgfx.cmake"]
+# 	path = lib/bgfx.cmake
+# 	url = https://github.com/widberg/bgfx.cmake
+# [submodule "lib/sfml"]
+# 	path = lib/sfml
+# 	url = git@github.com:SFML/cmake-sfml-project.git
+# [submodule "lib/stduuid"]
+# 	path = stduuid
+# 	url = https://github.com/mariusbancila/stduuid

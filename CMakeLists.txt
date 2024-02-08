@@ -4,7 +4,7 @@ project(Topdown
   VERSION
     1.0
   DESCRIPTION
-    "Very nice project"
+    "Simple 2D Topdown Shooty"
   LANGUAGES
     CXX
 )
@@ -14,10 +14,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(lib/bgfx.cmake)
 add_subdirectory(lib/sfml)
-# find_package(glfw3 3.3 REQUIRED)
+add_subdirectory(lib/stduuid)
+add_subdirectory(src)
 
-set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/input.cpp src/Player.cpp src/Entity.cpp)
-set(C_HEADERS src/Bullet.h src/Game.h src/input.h src/Player.h src/Entity.h)
+include(FetchContent)
+FetchContent_Declare(SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 2.6.x)
+FetchContent_MakeAvailable(SFML)
 
-add_executable(main ${C_SOURCES} ${C_HEADERS})
-target_link_libraries(main bgfx bx sfml-system sfml-window sfml-graphics)
+
+target_link_libraries(topdown bgfx bx sfml-system sfml-window sfml-graphics stduuid)
