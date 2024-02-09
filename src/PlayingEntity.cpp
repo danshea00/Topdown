@@ -2,18 +2,17 @@
 #include "PlayingEntity.h"
 #include "Bullet.h"
 
-auto RADIUS = 15;
-
 PlayingEntity::PlayingEntity(sf::Vector2f position, float speed, sf::Color colour) : m_position(position),
-                                                                                     m_speed(speed),
-
+                                                                                     m_speed(speed)
 {
-
+    auto RADIUS = 15;
     m_circle.setRadius(RADIUS);
     m_circle.setFillColor(colour);
     m_circle.setPosition(m_position);
-    m_circle.setOrigin(RADIUS, RADIUS);
+    m_circle.setOrigin(sf::Vector2f(RADIUS, RADIUS));
 }
+
+PlayingEntity::~PlayingEntity() {}
 
 void PlayingEntity::draw(sf::RenderWindow &window)
 {

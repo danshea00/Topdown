@@ -11,11 +11,11 @@ project(Topdown
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(BUILD_SHARED_LIBS FALSE)
 
 # add_subdirectory(lib/bgfx.cmake)
-# add_subdirectory(lib/sfml)
-# add_subdirectory(lib/stduuid)
-add_subdirectory(src)
+add_subdirectory(lib/SFML)
+
 
 # include(FetchContent)
 # FetchContent_Declare(SFML
@@ -23,5 +23,11 @@ add_subdirectory(src)
 #     GIT_TAG 2.6.x)
 # FetchContent_MakeAvailable(SFML)
 
+# TODO: move into src/CMakeLists
+set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/input.cpp src/Player.cpp src/Entity.cpp src/EntityManager.cpp src/PlayingEntity.cpp)
+set(C_HEADERS src/Bullet.h src/Game.h src/input.h src/Player.h src/Entity.h src/EntityManager.h src/PlayingEntity.h)
 
-target_link_libraries(topdown)
+add_executable(main ${C_SOURCES} ${C_HEADERS})
+
+target_link_libraries(main PRIVATE sfml-graphics sfml-window sfml-system)
+# target_link_libraries(topdown PRIVATE bgfx bx sfml-system sfml-window sfml-graphics)

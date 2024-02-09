@@ -1,11 +1,12 @@
 #include <cmath>
+#include <SFML/Window.hpp>
+
 #include "Game.h"
 #include "Player.h"
 #include "Bullet.h"
 #include "EntityManager.h"
 
-Game::Game() : m_window(sf::VideoMode(2000, 1000), "Top-Down Game"), entityManager(EntityManager.getInstance())
-                                                                         m_isButtonHeld(false)
+Game::Game() : m_window(sf::VideoMode(sf::Vector2u(2000, 1000)), "Top-Down Game"), m_isButtonHeld(false), entityManager(EntityManager::getInstance())
 {
     m_player = std::make_shared<Player>(sf::Vector2f(200.0f, 300.0f), 1);
     spawn(m_player);
@@ -33,23 +34,23 @@ void Game::handleEvents()
             m_window.close();
             break;
         case sf::Event::MouseButtonPressed:
-            if (event.mouseButton.button == sf::Mouse::Left)
+            if (event.mouseButton.button == sf::Mouse::Button::Left)
             {
                 m_player->shoot(mousePos);
             }
-            if (event.mouseButton.button == sf::Mouse::Right)
+            if (event.mouseButton.button == sf::Mouse::Button::Right)
             {
                 m_player->beginAiming();
             }
             break;
         case sf::Event::KeyPressed:
-            if (event.key.code == sf::Keyboard::Space)
+            if (event.key.code == sf::Keyboard::Key::Space)
             {
                 m_player->beginAiming();
             }
             break;
         case sf::Event::KeyReleased:
-            if (event.key.code == sf::Keyboard::Space)
+            if (event.key.code == sf::Keyboard::Key::Space)
             {
                 m_player->endAiming();
             }
@@ -62,7 +63,7 @@ void Game::handleEvents()
 
 void Game::update(sf::Time deltaTime)
 {
-    entityManager.updateEntities()
+    entityManager.updateEntities(deltaTime);
 }
 
 void Game::render()
@@ -76,5 +77,5 @@ void Game::render()
 
 void Game::spawn(std::shared_ptr<Entity> entity)
 {
-    entityManager.addEntity(entity)
+    entityManager.addEntity(entity);
 }

@@ -10,11 +10,12 @@
  */
 class EntityManager
 {
-private:
+protected:
     std::vector<std::shared_ptr<Entity>> m_entities;
+    int nextEntityId = 0;
 
     // Private Constructor
-    EntityManager();
+    EntityManager(){};
     // Stop the compiler generating methods of copy the object
     EntityManager(EntityManager const &copy) = delete;            // Not Implemented
     EntityManager &operator=(EntityManager const &copy) = delete; // Not Implemented
@@ -32,9 +33,9 @@ public:
     }
 
     void addEntity(std::shared_ptr<Entity> entityPtr);
-    void deleteEntity(boost::uuids::uuid entityId); // how to do this??
+    void deleteEntity(int entityId); // how to do this??
     void updateEntities(sf::Time deltaTime);
-    void drawEntities(sf::RenderWindow m_window);
+    void drawEntities(sf::RenderWindow &m_window);
 };
 
 #endif

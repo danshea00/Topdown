@@ -1,6 +1,15 @@
 #include "Entity.h"
-#include <stduuid/uuid.h>
 
-Entity::Entity() : entityId(uuids::uuid_system_generator{}()) {}
+Entity::Entity() {}
 
 Entity::~Entity() {}
+
+void Entity::setId(int newId)
+{
+    id = newId;
+}
+
+int Entity::getId()
+{
+    return id;
+}

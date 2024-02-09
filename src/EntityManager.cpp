@@ -1,5 +1,4 @@
 #include "EntityManager.h"
-#include <stduuid/uuid.h>
 
 void EntityManager::updateEntities(sf::Time deltaTime)
 {
@@ -9,7 +8,8 @@ void EntityManager::updateEntities(sf::Time deltaTime)
     }
 }
 
-void EntityManager::drawEntities(sf::RenderWindow m_window)
+// todo -- read into const, nonconst and references
+void EntityManager::drawEntities(sf::RenderWindow &m_window)
 {
     for (auto &entity : m_entities)
     {
@@ -17,21 +17,25 @@ void EntityManager::drawEntities(sf::RenderWindow m_window)
     }
 }
 
-void EntityManager::deleteEntity(uuid entity_id)
+void EntityManager::deleteEntity(int entity_id)
 {
     auto is_even = [](int i)
     { return i % 2 == 0; };
     auto entity_iterator = std::find_if(
         m_entities.begin(),
         m_entities.end(),
-        [](std::shared_ptr<Entity> *entity)
-        { return entity->entity_id == entity_id; });
+        [entity_id](std::shared_ptr<Entity> entity)
+        { return entity->getId() == entity_id; });
 
-    if (entity_iterator != std::end(n_entities))
-        m_entities.erase(entity_iterator)
+    if (entity_iterator != std::end(m_entities))
+    {
+        m_entities.erase(entity_iterator);
+    }
 } // how to do this??
 
 void EntityManager::addEntity(std::shared_ptr<Entity> entity)
 {
+    entity->setId(nextEntityId);
+    nextEntityId++;
     m_entities.push_back(entity);
 }

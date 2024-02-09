@@ -6,7 +6,7 @@
 #include "Bullet.h"
 
 /**
- * Encapsulate both the player and enemies in a super class
+ * abstract away both the player and enemies in a super class
  */
 class PlayingEntity : public Entity
 {
@@ -17,7 +17,7 @@ public:
     virtual void draw(sf::RenderWindow &window);
     virtual void move(sf::Vector2f movement) = 0;
     virtual void update(sf::Time deltaTime) = 0;
-    virtual Bullet *shoot(sf::Vector2f aimLocation) = 0;
+    virtual void shoot(sf::Vector2f aimLocation) = 0;
     // void beginAiming();
     // void endAiming();
 
