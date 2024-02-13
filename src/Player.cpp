@@ -1,35 +1,36 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+
 #include "Player.h"
+#include "PlayingEntity.h"
 #include "Bullet.h"
+#include "EntityManager.h"
 
-auto RADIUS = 15;
-
-Player::Player(sf::Vector2f position, float speed) : m_position(position),
-                                                     m_speed(speed), m_theta(1.0f)
+Player::Player(sf::Vector2f position, float speed) : PlayingEntity(position, speed, sf::Color::Blue), m_theta(1.0f)
 {
-
+    auto RADIUS = 15;
     m_circle.setRadius(RADIUS);
     m_circle.setFillColor(sf::Color::Blue);
     m_circle.setPosition(m_position);
-    m_circle.setOrigin(RADIUS, RADIUS);
+    m_circle.setOrigin(sf::Vector2f(RADIUS, RADIUS));
 }
 
 void Player::update(sf::Time deltaTime)
 {
     sf::Vector2f movement(0.f, 0.f);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
     {
         movement.y -= 1.f;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
     {
         movement.x -= 1.f;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
     {
         movement.y += 1.f;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
     {
         movement.x += 1.f;
     }
@@ -54,8 +55,15 @@ void Player::update(sf::Time deltaTime)
 
 void Player::move(sf::Vector2f movement)
 {
-    m_position += movement * m_speed;
+    m_position += movement * ((2 - m_isAiming) * m_speed);
     m_circle.setPosition(m_position);
+}
+
+void Player::shoot(sf::Vector2f aimLocation)
+{
+    auto newBullet = std::make_shared<Bullet>(m_position, aimLocation - m_position, m_theta);
+    auto &managerInstance = EntityManager::getInstance();
+    managerInstance.addEntity(newBullet);
 }
 
 void Player::draw(sf::RenderWindow &window)
@@ -64,13 +72,14 @@ void Player::draw(sf::RenderWindow &window)
     // Get the mouse position relative to the window
     sf::Vector2f mousePos = static_cast<sf::Vector2f>(sf::Mouse::getPosition(window));
     std::vector<sf::Vertex> lines = createLines(mousePos);
-    window.draw(&lines[0], lines.size(), sf::Lines);
+    window.draw(&lines[0], lines.size(), sf::PrimitiveType::Lines);
 }
 
-Bullet *Player::shoot(sf::Vector2f mousePos)
-{
-    return new Bullet(m_position, mousePos - m_position, m_theta);
-}
+// Bullet *Player::shoot(sf::Vector2f mousePos)
+// {
+//     auto newBullet = new Bullet(m_position, mousePos - m_position, m_theta);
+//     return newBullet;
+// }
 
 void Player::beginAiming()
 {
@@ -80,17 +89,6 @@ void Player::beginAiming()
 void Player::endAiming()
 {
     m_isAiming = false;
-}
-
-sf::Vector2f Player::getPosition()
-{
-    float radius = m_circle.getRadius();
-    return m_position + sf::Vector2f(radius, radius);
-}
-
-float Player::getRadius()
-{
-    return m_circle.getRadius();
 }
 
 std::vector<sf::Vertex> Player::createLines(sf::Vector2f mousePos)

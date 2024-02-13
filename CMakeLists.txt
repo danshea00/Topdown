@@ -4,20 +4,30 @@ project(Topdown
   VERSION
     1.0
   DESCRIPTION
-    "Very nice project"
+    "Simple 2D Topdown Shooty"
   LANGUAGES
     CXX
 )
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(BUILD_SHARED_LIBS FALSE)
 
-add_subdirectory(lib/bgfx.cmake)
-add_subdirectory(lib/sfml)
-# find_package(glfw3 3.3 REQUIRED)
+# add_subdirectory(lib/bgfx.cmake)
+add_subdirectory(lib/SFML)
 
-set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/input.cpp src/Player.cpp src/Entity.cpp)
-set(C_HEADERS src/Bullet.h src/Game.h src/input.h src/Player.h src/Entity.h)
+
+# include(FetchContent)
+# FetchContent_Declare(SFML
+#     GIT_REPOSITORY https://github.com/SFML/SFML.git
+#     GIT_TAG 2.6.x)
+# FetchContent_MakeAvailable(SFML)
+
+# TODO: move into src/CMakeLists
+set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/input.cpp src/Player.cpp src/Entity.cpp src/EntityManager.cpp src/PlayingEntity.cpp)
+set(C_HEADERS src/Bullet.h src/Game.h src/input.h src/Player.h src/Entity.h src/EntityManager.h src/PlayingEntity.h)
 
 add_executable(main ${C_SOURCES} ${C_HEADERS})
-target_link_libraries(main bgfx bx sfml-system sfml-window sfml-graphics)
+
+target_link_libraries(main PRIVATE sfml-graphics sfml-window sfml-system)
+# target_link_libraries(topdown PRIVATE bgfx bx sfml-system sfml-window sfml-graphics)
