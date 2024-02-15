@@ -8,7 +8,7 @@
 class Player : public PlayingEntity
 {
 public:
-    Player(sf::Vector2f position, float speed);
+    Player(sf::Vector2f position);
 
     // Bullet *shoot(sf::Vector2f mousePos);
     void beginAiming();
@@ -23,9 +23,7 @@ public:
     void update(sf::Time deltaTime) override;
 
 private:
-    // sf::CircleShape m_circle;
-    // sf::Vector2f m_position;
-    // float m_speed;
+    float m_speed;
     float m_theta;
     bool m_isAiming;
 

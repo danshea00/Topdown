@@ -1,10 +1,21 @@
 #include "EntityManager.h"
+#include <iostream>
 
 void EntityManager::updateEntities(sf::Time deltaTime)
 {
-    for (auto &entity : m_entities)
+    // don't use for loop!
+    for (auto entityIt = m_spawn_queue.begin(); entityIt != m_spawn_queue.end(); entityIt++)
     {
-        entity->update(deltaTime);
+        std::cout << "completing spawn of entity id: " << (*entityIt)->getId() << '\n';
+        m_entities.push_back(*entityIt);
+    }
+
+    m_spawn_queue.clear();
+
+    for (auto entityIt = m_entities.begin(); entityIt != m_entities.end(); entityIt++)
+    {
+        std::cout << "updating entity id: " << (*entityIt)->getId() << '\n';
+        (*entityIt)->update(deltaTime);
     }
 }
 
@@ -19,8 +30,6 @@ void EntityManager::drawEntities(sf::RenderWindow &m_window)
 
 void EntityManager::deleteEntity(int entity_id)
 {
-    auto is_even = [](int i)
-    { return i % 2 == 0; };
     auto entity_iterator = std::find_if(
         m_entities.begin(),
         m_entities.end(),
@@ -33,9 +42,9 @@ void EntityManager::deleteEntity(int entity_id)
     }
 } // how to do this??
 
-void EntityManager::addEntity(std::shared_ptr<Entity> entity)
+void EntityManager::spawnEntity(std::shared_ptr<Entity> entity)
 {
-    entity->setId(nextEntityId);
+    entity->setId(nextEntityId); // should the entity set this itself on construction?
     nextEntityId++;
-    m_entities.push_back(entity);
+    m_spawn_queue.push_back(entity);
 }

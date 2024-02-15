@@ -12,6 +12,7 @@ class EntityManager
 {
 protected:
     std::vector<std::shared_ptr<Entity>> m_entities;
+    std::vector<std::shared_ptr<Entity>> m_spawn_queue;
     int nextEntityId = 0;
 
     // Private Constructor
@@ -19,7 +20,6 @@ protected:
     // Stop the compiler generating methods of copy the object
     EntityManager(EntityManager const &copy) = delete;            // Not Implemented
     EntityManager &operator=(EntityManager const &copy) = delete; // Not Implemented
-
 public:
     static EntityManager &getInstance()
     {
@@ -32,7 +32,8 @@ public:
         }
     }
 
-    void addEntity(std::shared_ptr<Entity> entityPtr);
+    // return pointer to entity
+    void spawnEntity(std::shared_ptr<Entity> entity);
     void deleteEntity(int entityId); // how to do this??
     void updateEntities(sf::Time deltaTime);
     void drawEntities(sf::RenderWindow &m_window);

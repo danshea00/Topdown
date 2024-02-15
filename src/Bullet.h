@@ -9,7 +9,7 @@
 class Bullet : public Entity
 {
 public:
-    Bullet(sf::Vector2f position, sf::Vector2f direction, float theta);
+    Bullet(sf::Vector2f position, sf::Vector2f direction);
     void update(sf::Time deltaTime);
     void draw(sf::RenderWindow &window);
     bool isOutOfBounds(sf::RenderWindow &window);

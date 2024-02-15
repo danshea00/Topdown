@@ -9,7 +9,6 @@ class Game
 public:
     Game();
     void run();
-    void spawn(std::shared_ptr<Entity> entity);
 
 private:
     void handleEvents();
@@ -19,5 +18,4 @@ private:
     std::shared_ptr<Player> m_player;
     sf::Clock m_clock;
     bool m_isButtonHeld;
-    EntityManager &entityManager;
 };

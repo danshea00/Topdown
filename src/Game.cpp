@@ -3,13 +3,19 @@
 
 #include "Game.h"
 #include "Player.h"
+#include "Enemy.h"
 #include "Bullet.h"
 #include "EntityManager.h"
 
-Game::Game() : m_window(sf::VideoMode(sf::Vector2u(2000, 1000)), "Top-Down Game"), m_isButtonHeld(false), entityManager(EntityManager::getInstance())
+Game::Game() : m_window(sf::VideoMode(sf::Vector2u(2000, 1000)), "Top-Down Game"), m_isButtonHeld(false)
 {
-    m_player = std::make_shared<Player>(sf::Vector2f(200.0f, 300.0f), 1);
-    spawn(m_player);
+    auto &managerInstance = EntityManager::getInstance();
+
+    m_player = std::make_shared<Player>(sf::Vector2f(400.0f, 600.0f));
+    managerInstance.spawnEntity(m_player);
+
+    auto enemy1 = std::make_shared<Enemy>(sf::Vector2f(600.0f, 600.0f));
+    managerInstance.spawnEntity(enemy1);
 }
 
 void Game::run()
@@ -63,19 +69,16 @@ void Game::handleEvents()
 
 void Game::update(sf::Time deltaTime)
 {
-    entityManager.updateEntities(deltaTime);
+    auto &managerInstance = EntityManager::getInstance();
+    managerInstance.updateEntities(deltaTime);
 }
 
 void Game::render()
 {
+    auto &managerInstance = EntityManager::getInstance();
     m_window.clear();
-    entityManager.drawEntities(m_window);
+    managerInstance.drawEntities(m_window);
 
     // Display the window contents
     m_window.display();
-}
-
-void Game::spawn(std::shared_ptr<Entity> entity)
-{
-    entityManager.addEntity(entity);
 }
