@@ -1,23 +1,20 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <cmath>
 
 #include "Player.h"
 #include "PlayingEntity.h"
 #include "Bullet.h"
 #include "EntityManager.h"
 
-Player::Player(sf::Vector2f position, float speed) : PlayingEntity(position, speed, sf::Color::Blue), m_theta(1.0f)
+Player::Player(sf::Vector2f position) : PlayingEntity(position, sf::Color::Blue, "player"), m_theta(1.0f), m_speed(1.0f)
 {
-    auto RADIUS = 15;
-    m_circle.setRadius(RADIUS);
-    m_circle.setFillColor(sf::Color::Blue);
-    m_circle.setPosition(m_position);
-    m_circle.setOrigin(sf::Vector2f(RADIUS, RADIUS));
 }
 
 void Player::update(sf::Time deltaTime)
 {
-    sf::Vector2f movement(0.f, 0.f);
+    auto movement = sf::Vector2f(0.f, 0.f);
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
     {
         movement.y -= 1.f;
@@ -61,9 +58,18 @@ void Player::move(sf::Vector2f movement)
 
 void Player::shoot(sf::Vector2f aimLocation)
 {
-    auto newBullet = std::make_shared<Bullet>(m_position, aimLocation - m_position, m_theta);
+
+    auto aimDirection = aimLocation - m_position;
+    // Calculate the angle between the original direction and the x-axis
+    float aimAngle = atan2(aimDirection.y, aimDirection.x);
+
+    // Calculate the new direction vector using the modified angle
+    float shootAngle = aimAngle + (float)(rand()) / (float)(RAND_MAX - 0.5f) * m_theta; // Randomize angle
+    auto shootDirection = sf::Vector2f(cos(aimAngle), sin(aimAngle));
+
+    auto bulletPtr = std::make_shared<Bullet>(m_position, shootDirection);
     auto &managerInstance = EntityManager::getInstance();
-    managerInstance.addEntity(newBullet);
+    managerInstance.spawnEntity(bulletPtr);
 }
 
 void Player::draw(sf::RenderWindow &window)
@@ -74,12 +80,6 @@ void Player::draw(sf::RenderWindow &window)
     std::vector<sf::Vertex> lines = createLines(mousePos);
     window.draw(&lines[0], lines.size(), sf::PrimitiveType::Lines);
 }
-
-// Bullet *Player::shoot(sf::Vector2f mousePos)
-// {
-//     auto newBullet = new Bullet(m_position, mousePos - m_position, m_theta);
-//     return newBullet;
-// }
 
 void Player::beginAiming()
 {

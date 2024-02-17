@@ -24,8 +24,8 @@ add_subdirectory(lib/SFML)
 # FetchContent_MakeAvailable(SFML)
 
 # TODO: move into src/CMakeLists
-set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/input.cpp src/Player.cpp src/Entity.cpp src/EntityManager.cpp src/PlayingEntity.cpp)
-set(C_HEADERS src/Bullet.h src/Game.h src/input.h src/Player.h src/Entity.h src/EntityManager.h src/PlayingEntity.h)
+set(C_SOURCES src/main.cpp src/Bullet.cpp src/Game.cpp src/Player.cpp src/Entity.cpp src/EntityManager.cpp src/PlayingEntity.cpp src/Enemy.cpp)
+set(C_HEADERS src/Bullet.h src/Game.h  src/Player.h src/Entity.h src/EntityManager.h src/PlayingEntity.h src/Enemy.h)
 
 add_executable(main ${C_SOURCES} ${C_HEADERS})
 

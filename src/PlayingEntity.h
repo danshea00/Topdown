@@ -11,7 +11,7 @@
 class PlayingEntity : public Entity
 {
 public:
-    PlayingEntity(sf::Vector2f position, float speed, sf::Color colour);
+    PlayingEntity(sf::Vector2f position, sf::Color colour, std::string entityKey);
     virtual ~PlayingEntity();
 
     virtual void draw(sf::RenderWindow &window);
@@ -26,12 +26,6 @@ public:
 
 protected:
     sf::CircleShape m_circle;
-    sf::Vector2f m_position;
-    float m_speed;
-    // float m_theta;
-    // bool m_isAiming;
-
-    // std::vector<sf::Vertex> createLines(sf::Vector2f mousePos);
 };
 
 #endif // PLAYER_H

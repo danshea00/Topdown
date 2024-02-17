@@ -9,13 +9,12 @@
 class Bullet : public Entity
 {
 public:
-    Bullet(sf::Vector2f position, sf::Vector2f direction, float theta);
+    Bullet(sf::Vector2f position, sf::Vector2f direction);
     void update(sf::Time deltaTime);
     void draw(sf::RenderWindow &window);
     bool isOutOfBounds(sf::RenderWindow &window);
 
 private:
     sf::CircleShape m_circle;
-    sf::Vector2f m_position;
     sf::Vector2f m_direction;
 };
