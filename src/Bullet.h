@@ -16,6 +16,5 @@ public:
 
 private:
     sf::CircleShape m_circle;
-    sf::Vector2f m_position;
     sf::Vector2f m_direction;
 };

@@ -7,7 +7,7 @@
 #include "Bullet.h"
 #include "EntityManager.h"
 
-Player::Player(sf::Vector2f position) : PlayingEntity(position, sf::Color::Blue), m_theta(1.0f), m_speed(1.0f)
+Player::Player(sf::Vector2f position) : PlayingEntity(position, sf::Color::Blue, "player"), m_theta(1.0f), m_speed(1.0f)
 {
 }
 

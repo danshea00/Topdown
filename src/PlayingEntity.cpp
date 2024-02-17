@@ -2,7 +2,7 @@
 #include "PlayingEntity.h"
 #include "Bullet.h"
 
-PlayingEntity::PlayingEntity(sf::Vector2f position, sf::Color colour) : m_position(position)
+PlayingEntity::PlayingEntity(sf::Vector2f position, sf::Color colour, std::string entityKey) : Entity(position, entityKey)
 {
     auto RADIUS = 15;
     m_circle.setRadius(RADIUS);

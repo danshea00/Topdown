@@ -7,7 +7,7 @@
 #include <iostream>
 #include "EntityManager.h"
 
-Enemy::Enemy(sf::Vector2f position) : PlayingEntity(position, sf::Color::Red)
+Enemy::Enemy(sf::Vector2f position) : PlayingEntity(position, sf::Color::Red, "enemy")
 {
 }
 

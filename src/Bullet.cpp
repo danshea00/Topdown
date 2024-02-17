@@ -1,6 +1,6 @@
 #include "Bullet.h"
 
-Bullet::Bullet(sf::Vector2f position, sf::Vector2f direction) : m_position(position), m_direction(direction.normalized())
+Bullet::Bullet(sf::Vector2f position, sf::Vector2f direction) : Entity(position, "bullet"), m_direction(direction.normalized())
 {
     m_circle.setRadius(5);
     m_circle.setFillColor(sf::Color::Red);
