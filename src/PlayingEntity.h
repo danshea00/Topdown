@@ -14,18 +14,23 @@ public:
     PlayingEntity(sf::Vector2f position, sf::Color colour, std::string entityKey);
     virtual ~PlayingEntity();
 
-    virtual void draw(sf::RenderWindow &window);
+    virtual void draw(sf::RenderWindow &window) override;
     virtual void move(sf::Vector2f movement) = 0;
-    virtual void update(sf::Time deltaTime) = 0;
     virtual void shoot(sf::Vector2f aimLocation) = 0;
     // void beginAiming();
     // void endAiming();
 
+    sf::FloatRect getGlobalBounds() override;
+
     sf::Vector2f getPosition();
-    float getRadius();
+    int getHealth();
 
 protected:
     sf::CircleShape m_circle;
+    sf::RectangleShape m_health_bar;
+    int m_health;
+    int MAX_HEALTH = 100;
+    int RADIUS = 15;
 };
 
 #endif // PLAYER_H

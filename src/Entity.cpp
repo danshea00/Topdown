@@ -18,3 +18,8 @@ std::string Entity::getEntityKey()
 {
     return m_entity_key;
 }
+
+bool Entity::isIntersecting(sf::FloatRect occupiedRegion)
+{
+    return getGlobalBounds().findIntersection(occupiedRegion).has_value;
+}

@@ -53,19 +53,17 @@ void Player::update(sf::Time deltaTime)
 void Player::move(sf::Vector2f movement)
 {
     m_position += movement * ((2 - m_isAiming) * m_speed);
-    m_circle.setPosition(m_position);
 }
 
 void Player::shoot(sf::Vector2f aimLocation)
 {
-
     auto aimDirection = aimLocation - m_position;
     // Calculate the angle between the original direction and the x-axis
     float aimAngle = atan2(aimDirection.y, aimDirection.x);
 
     // Calculate the new direction vector using the modified angle
-    float shootAngle = aimAngle + (float)(rand()) / (float)(RAND_MAX - 0.5f) * m_theta; // Randomize angle
-    auto shootDirection = sf::Vector2f(cos(aimAngle), sin(aimAngle));
+    float shootAngle = aimAngle + (((float)rand() / (float)RAND_MAX) - 0.5) * m_theta; // Randomize angle
+    auto shootDirection = sf::Vector2f(cos(shootAngle), sin(shootAngle));
 
     auto bulletPtr = std::make_shared<Bullet>(m_position, shootDirection);
     auto &managerInstance = EntityManager::getInstance();
@@ -74,7 +72,9 @@ void Player::shoot(sf::Vector2f aimLocation)
 
 void Player::draw(sf::RenderWindow &window)
 {
-    window.draw(m_circle);
+
+    PlayingEntity::draw(window);
+
     // Get the mouse position relative to the window
     sf::Vector2f mousePos = static_cast<sf::Vector2f>(sf::Mouse::getPosition(window));
     std::vector<sf::Vertex> lines = createLines(mousePos);

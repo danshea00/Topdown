@@ -11,9 +11,12 @@
 class EntityManager
 {
 protected:
+    // maybe use map of id to entity ptr??
     std::vector<std::shared_ptr<Entity>> m_entities;
     std::vector<std::shared_ptr<Entity>> m_spawn_queue;
     int nextEntityId = 0;
+
+    std::shared_ptr<Entity> getEntityCollidingWith(sf::FloatRect boundary);
 
     // Private Constructor
     EntityManager(){};

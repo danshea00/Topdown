@@ -16,7 +16,6 @@ void Enemy::update(sf::Time deltaTime)
     timeTillShoot--;
     if (timeTillShoot <= 0)
     {
-        std::cout << "shooting\n";
         this->shoot(sf::Vector2f(400.0f, 600.0f));
         timeTillShoot = 10000;
     }
@@ -31,9 +30,4 @@ void Enemy::shoot(sf::Vector2f aimLocation)
     auto newBullet = std::make_shared<Bullet>(m_position, aimLocation - m_position);
     auto &managerInstance = EntityManager::getInstance();
     managerInstance.spawnEntity(newBullet);
-}
-
-void Enemy::draw(sf::RenderWindow &window)
-{
-    window.draw(m_circle);
 }

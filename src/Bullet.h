@@ -10,9 +10,11 @@ class Bullet : public Entity
 {
 public:
     Bullet(sf::Vector2f position, sf::Vector2f direction);
-    void update(sf::Time deltaTime);
-    void draw(sf::RenderWindow &window);
+    void update(sf::Time deltaTime) override;
+    void draw(sf::RenderWindow &window) override;
     bool isOutOfBounds(sf::RenderWindow &window);
+
+    sf::FloatRect getGlobalBounds() override;
 
 private:
     sf::CircleShape m_circle;
