@@ -7,7 +7,7 @@
 #include <iostream>
 #include "EntityManager.h"
 
-Enemy::Enemy(sf::Vector2f position) : PlayingEntity(position, sf::Color::Red, "enemy")
+Enemy::Enemy(sf::Vector2f position) : PlayingEntity(position, sf::Color::Red)
 {
 }
 
@@ -27,7 +27,7 @@ void Enemy::move(sf::Vector2f movement)
 
 void Enemy::shoot(sf::Vector2f aimLocation)
 {
-    auto newBullet = std::make_shared<Bullet>(m_position, aimLocation - m_position);
+    auto newBullet = std::make_shared<Bullet>(m_position, aimLocation - m_position, this->id);
     auto &managerInstance = EntityManager::getInstance();
-    managerInstance.spawnEntity(newBullet);
+    managerInstance.spawnBullet(newBullet);
 }

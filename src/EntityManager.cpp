@@ -1,80 +1,134 @@
 #include "EntityManager.h"
+#include "Entity.h"
+#include "Bullet.h"
 #include <iostream>
 #include <algorithm>
 
-std::shared_ptr<Entity> EntityManager::getEntityCollidingWith(sf::FloatRect occupiedRegion)
+// for bullet shoot:
+// get all bullets
+// check if they're colliding with a playingentity
+// destroy bullet
+// deal damage to entity
+
+void EntityManager::processBulletCollisions()
 {
-    auto entity_iterator = std::find_if(
-        m_entities.begin(),
-        m_entities.end(),
-        [entity_id](std::shared_ptr<Entity> entity)
-        { return entity->isIntersecting(occupiedRegion) });
-
-    if (entity_iterator != std::end(m_entities))
-    {
-        return (*entity_iterator)
-    }
-
-    return std::nullopt
+    std::for_each(
+        m_bullets.begin(),
+        m_bullets.end(),
+        [&](std::shared_ptr<Bullet> bulletPtr) {
+            std::for_each(
+                m_players.begin(),
+                m_players.end(),
+                [&](std::shared_ptr<PlayingEntity> playingEntity) {
+                    if (bulletPtr->isIntersecting(playingEntity)){
+                        processBulletCollision(playingEntity, bulletPtr);
+                    }
+                }
+            );
+        }
+    );
 }
 
+void EntityManager::processBulletCollision(
+    std::shared_ptr<PlayingEntity> playingEnt, 
+    std::shared_ptr<Bullet> bulletPtr) {
+    if (playingEnt->id != bulletPtr->m_shotBy) {
+        // TODO MAGIC NUMBER
+        playingEnt->takeDamage(0.1);
+        queueForDeletion(bulletPtr->id);
+    }
+}
+
+void EntityManager::queueForDeletion(EntityId entityId) {
+    m_to_delete.push_back(entityId);
+}   
+
+void EntityManager::deleteEntity(EntityId entityId) {
+    // find entity corresponding to ID
+    auto num_erased = std::erase_if(
+        m_bullets,
+        [=](std::shared_ptr<Entity> entityPtr){return entityId == entityPtr->id;}
+    );
+
+    if (num_erased > 0) return;
+    std::erase_if(
+        m_players,
+        [=](std::shared_ptr<Entity> entityPtr){return entityId == entityPtr->id;}
+    );
+}
+
+void EntityManager::deleteEntitiesInQueue() {
+    std::for_each(
+        m_to_delete.begin(),
+        m_to_delete.end(),
+        [&](EntityId entityId){deleteEntity(entityId);}
+    );
+
+    m_to_delete.clear();
+}
+
+void EntityManager::doForAllEntities(std::function<void(std::shared_ptr<Entity>)> f) {
+    std::for_each(
+        m_bullets.begin(),
+        m_bullets.end(),
+        f
+    );
+
+    std::for_each(
+        m_players.begin(),
+        m_players.end(),
+        f
+    );
+}
+
+void EntityManager::spawnEntitiesInQueue()
+{
+    std::for_each(
+        m_spawning_bullets.cbegin(),
+        m_spawning_bullets.cend(),
+        [this](std::shared_ptr<Bullet> bulletPtr){m_bullets.push_back(bulletPtr);}
+    );
+
+    std::for_each(
+        m_spawning_players.cbegin(),
+        m_spawning_players.cend(),
+        [this](std::shared_ptr<PlayingEntity> playerPtr){m_players.push_back(playerPtr);}
+    );
+
+    m_spawning_bullets.clear();
+    m_spawning_players.clear();
+}
+ 
 void EntityManager::updateEntities(sf::Time deltaTime)
 {
-
-    // don't use for loop!
-    for (auto entityIt = m_spawn_queue.begin(); entityIt != m_spawn_queue.end(); entityIt++)
-    {
-        m_entities.push_back(*entityIt);
-    }
-
-    m_spawn_queue.clear();
-
-    for (auto entityIt = m_entities.begin(); entityIt != m_entities.end(); entityIt++)
-    {
-        (*entityIt)->update(deltaTime);
-    }
+    spawnEntitiesInQueue();
+    deleteEntitiesInQueue();
+    processBulletCollisions();
+    doForAllEntities(
+        [=] (std::shared_ptr<Entity> entityPtr) { 
+            entityPtr->update(deltaTime);
+        });
 }
 
 // todo -- read into const, nonconst and references
 void EntityManager::drawEntities(sf::RenderWindow &m_window)
 {
-    for (auto &entity : m_entities)
-    {
-        entity->draw(m_window);
-    }
+    doForAllEntities(
+        [&](std::shared_ptr<Entity> entityPtr) {
+            entityPtr->draw(m_window);
+        });
 }
 
-void EntityManager::deleteEntity(int entity_id)
-{
-    auto entity_iterator = std::find_if(
-        m_entities.begin(),
-        m_entities.end(),
-        [entity_id](std::shared_ptr<Entity> entity)
-        { return entity->getId() == entity_id; });
-
-    if (entity_iterator != std::end(m_entities))
-    {
-        m_entities.erase(entity_iterator);
-    }
-} // how to do this??
-
-void EntityManager::deleteEntity(int entity_id)
-{
-    auto entity_iterator = std::find_if(
-        m_entities.begin(),
-        m_entities.end(),
-        [entity_id](std::shared_ptr<Entity> entity)
-        { return entity->getId() == entity_id; });
-
-    if (entity_iterator != std::end(m_entities))
-    {
-        m_entities.erase(entity_iterator);
-    }
-} // how to do this??
-
-void EntityManager::spawnEntity(std::shared_ptr<Entity> entity)
-{
-    entity->setId(nextEntityId); // should the entity set this itself on construction?
+ void EntityManager::spawnPlayingEntity(std::shared_ptr<PlayingEntity> entity)
+ {
+    entity->id = nextEntityId; 
     nextEntityId++;
-    m_spawn_queue.push_back(entity);
+    m_spawning_players.push_back(entity);
+ }
+
+void EntityManager::spawnBullet(std::shared_ptr<Bullet> entity)
+{
+    entity->id = nextEntityId;
+    nextEntityId++;
+    m_spawning_bullets.push_back(entity);
 }

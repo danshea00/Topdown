@@ -7,7 +7,7 @@
 #include "Bullet.h"
 #include "EntityManager.h"
 
-Player::Player(sf::Vector2f position) : PlayingEntity(position, sf::Color::Blue, "player"), m_theta(1.0f), m_speed(1.0f)
+Player::Player(sf::Vector2f position) : PlayingEntity(position, sf::Color::Blue), m_theta(1.0f), m_speed(1.0f)
 {
 }
 
@@ -65,9 +65,9 @@ void Player::shoot(sf::Vector2f aimLocation)
     float shootAngle = aimAngle + (((float)rand() / (float)RAND_MAX) - 0.5) * m_theta; // Randomize angle
     auto shootDirection = sf::Vector2f(cos(shootAngle), sin(shootAngle));
 
-    auto bulletPtr = std::make_shared<Bullet>(m_position, shootDirection);
+    auto bulletPtr = std::make_shared<Bullet>(m_position, shootDirection, this->id);
     auto &managerInstance = EntityManager::getInstance();
-    managerInstance.spawnEntity(bulletPtr);
+    managerInstance.spawnBullet(bulletPtr);
 }
 
 void Player::draw(sf::RenderWindow &window)

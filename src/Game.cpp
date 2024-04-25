@@ -13,10 +13,10 @@ Game::Game() : m_window(sf::VideoMode(sf::Vector2u(2000, 1000)), "Top-Down Game"
     auto &managerInstance = EntityManager::getInstance();
 
     m_player = std::make_shared<Player>(sf::Vector2f(400.0f, 600.0f));
-    managerInstance.spawnEntity(m_player);
+    managerInstance.spawnPlayingEntity(m_player);
 
     auto enemy1 = std::make_shared<Enemy>(sf::Vector2f(600.0f, 600.0f));
-    managerInstance.spawnEntity(enemy1);
+    managerInstance.spawnPlayingEntity(enemy1);
 }
 
 void Game::run()

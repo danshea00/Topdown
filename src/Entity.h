@@ -3,16 +3,15 @@
 
 #include <SFML/Graphics.hpp>
 
+using EntityId = int;
+
 class Entity
 {
 public:
-    Entity(sf::Vector2f position, std::string entityKey);
+    Entity(sf::Vector2f position);
     virtual ~Entity();
 
-    void setId(int id);
-    // use typedef?
-    int getId();
-    std::string getEntityKey();
+    EntityId id;
 
     bool operator==(Entity const &rhs) const
     {
@@ -23,12 +22,12 @@ public:
     virtual void draw(sf::RenderWindow &window) = 0;
     virtual sf::FloatRect getGlobalBounds() = 0;
 
-    bool isIntersecting(sf::FloatRect);
+    bool isIntersecting(std::shared_ptr<Entity> other);
+    bool isOutOfBounds(sf::RenderWindow &window);
 
 protected:
     sf::Vector2f m_position;
-    int id;
-    std::string m_entity_key;
+
 
 private:
 };
