@@ -4,12 +4,6 @@
 #include <iostream>
 #include <algorithm>
 
-// for bullet shoot:
-// get all bullets
-// check if they're colliding with a playingentity
-// destroy bullet
-// deal damage to entity
-
 void EntityManager::processBulletCollisions()
 {
     std::for_each(
