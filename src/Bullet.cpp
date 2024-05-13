@@ -1,6 +1,9 @@
 #include "Bullet.h"
+#include "PlayingEntity.h"
+#include "EntityManager.h"
 
-Bullet::Bullet(sf::Vector2f position, sf::Vector2f direction) : Entity(position, "bullet"), m_direction(direction.normalized())
+Bullet::Bullet(sf::Vector2f position, sf::Vector2f direction, EntityId shotBy) 
+: Entity(position), m_direction(direction.normalized()), m_shotBy(shotBy)
 {
     m_circle.setRadius(5);
     m_circle.setFillColor(sf::Color::Red);
@@ -8,8 +11,7 @@ Bullet::Bullet(sf::Vector2f position, sf::Vector2f direction) : Entity(position,
 }
 
 void Bullet::update(sf::Time deltaTime)
-{
-    // Update the bullet position based on its direction and speed
+{  
     m_position += m_direction * BULLET_SPEED * deltaTime.asSeconds();
     m_circle.setPosition(m_position);
 }
@@ -19,9 +21,7 @@ void Bullet::draw(sf::RenderWindow &window)
     window.draw(m_circle);
 }
 
-bool Bullet::isOutOfBounds(sf::RenderWindow &window)
+sf::FloatRect Bullet::getGlobalBounds()
 {
-    // Check if the bullet is out of the window bounds
-    return (m_position.x < 0 || m_position.x > window.getSize().x ||
-            m_position.y < 0 || m_position.y > window.getSize().y);
+    return m_circle.getGlobalBounds();
 }

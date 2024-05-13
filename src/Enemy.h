@@ -12,7 +12,6 @@ public:
 
     void shoot(sf::Vector2f aimLocation) override;
     void move(sf::Vector2f movement) override;
-    void draw(sf::RenderWindow &window) override;
     void update(sf::Time deltaTime) override;
 
 private:
